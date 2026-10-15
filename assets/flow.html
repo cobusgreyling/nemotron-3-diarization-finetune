@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Fine-tune flow</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 1600px;
+      height: 450px;
+      overflow: hidden;
+      background: #f3ecdf;
+      color: #1b1916;
+    }
+    .page {
+      box-sizing: border-box;
+      width: 1600px;
+      height: 450px;
+      padding: 40px 56px 36px;
+      position: relative;
+    }
+    .page::before {
+      content: "";
+      position: absolute;
+      inset: 22px;
+      border: 1px solid #d9cfc0;
+      pointer-events: none;
+    }
+    .kicker {
+      margin: 4px 0 10px;
+      font-family: "Avenir Next", "Avenir", "Helvetica Neue", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: #9c4d2b;
+    }
+    h1 {
+      margin: 0;
+      font-family: "Iowan Old Style", "New York", Palatino, serif;
+      font-weight: 400;
+      font-size: 54px;
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+    }
+    .deck {
+      margin: 14px 0 0;
+      font-family: "Iowan Old Style", "New York", Palatino, serif;
+      font-style: italic;
+      font-size: 22px;
+      color: #3f3a34;
+    }
+    .flow {
+      margin-top: 36px;
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 0;
+    }
+    .step {
+      width: 230px;
+      background: #f7f2e8;
+      border: 1.5px solid #1b1916;
+      padding: 18px 16px 16px;
+      box-sizing: border-box;
+    }
+    .n {
+      font-family: "Avenir Next", "Avenir", "Helvetica Neue", sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      color: #9c4d2b;
+    }
+    h2 {
+      margin: 8px 0 0;
+      font-family: "Iowan Old Style", "New York", Palatino, serif;
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+    p {
+      margin: 10px 0 0;
+      font-family: "Avenir Next", "Avenir", "Helvetica Neue", sans-serif;
+      font-size: 15px;
+      line-height: 1.35;
+      color: #4e4943;
+    }
+    .arrow {
+      align-self: center;
+      width: 28px;
+      text-align: center;
+      font-family: "Iowan Old Style", Palatino, serif;
+      font-size: 28px;
+      color: #9c4d2b;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="kicker">Nemotron 3 Diarization</div>
+    <h1>From a mix to a score.</h1>
+    <p class="deck">The encoder stays frozen. Only the speaker head is trained.</p>
+    <div class="flow">
+      <div class="step">
+        <div class="n">01</div>
+        <h2>Mix the voices</h2>
+        <p>Three Mac voices, placed so some of the words overlap.</p>
+      </div>
+      <div class="arrow">→</div>
+      <div class="step">
+        <div class="n">02</div>
+        <h2>Write the RTTM</h2>
+        <p>Each line is a start, a duration, and a speaker name.</p>
+      </div>
+      <div class="arrow">→</div>
+      <div class="step">
+        <div class="n">03</div>
+        <h2>Score the base</h2>
+        <p>The public checkpoint, collar 0, overlap counted.</p>
+      </div>
+      <div class="arrow">→</div>
+      <div class="step">
+        <div class="n">04</div>
+        <h2>Train the head</h2>
+        <p>Binary cross-entropy on 10 ms frames. Arrival order.</p>
+      </div>
+      <div class="arrow">→</div>
+      <div class="step">
+        <div class="n">05</div>
+        <h2>Score again</h2>
+        <p>Same holdout clips. Lower DER is the result.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,2 @@
+{"id": "dv01", "split": "dev", "audio_filepath": "data/dev/dv01.wav", "offset": 0, "duration": 4.121, "label": "infer", "text": "-", "num_speakers": 2, "rttm_filepath": "data/rttm/dv01.rttm", "arrival": ["alice", "daniel"]}
+{"id": "dv02", "split": "dev", "audio_filepath": "data/dev/dv02.wav", "offset": 0, "duration": 5.128, "label": "infer", "text": "-", "num_speakers": 3, "rttm_filepath": "data/rttm/dv02.rttm", "arrival": ["anna", "alice", "daniel"]}

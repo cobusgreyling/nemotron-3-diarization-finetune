@@ -1,0 +1,4 @@
+{"id": "ho01", "split": "holdout", "audio_filepath": "data/holdout/ho01.wav", "offset": 0, "duration": 5.46, "label": "infer", "text": "-", "num_speakers": 3, "rttm_filepath": "data/rttm/ho01.rttm", "arrival": ["daniel", "alice", "anna"]}
+{"id": "ho02", "split": "holdout", "audio_filepath": "data/holdout/ho02.wav", "offset": 0, "duration": 3.89, "label": "infer", "text": "-", "num_speakers": 2, "rttm_filepath": "data/rttm/ho02.rttm", "arrival": ["anna", "daniel"]}
+{"id": "ho03", "split": "holdout", "audio_filepath": "data/holdout/ho03.wav", "offset": 0, "duration": 3.463, "label": "infer", "text": "-", "num_speakers": 2, "rttm_filepath": "data/rttm/ho03.rttm", "arrival": ["alice", "anna"]}
+{"id": "ho04", "split": "holdout", "audio_filepath": "data/holdout/ho04.wav", "offset": 0, "duration": 5.56, "label": "infer", "text": "-", "num_speakers": 3, "rttm_filepath": "data/rttm/ho04.rttm", "arrival": ["daniel", "anna", "alice"]}

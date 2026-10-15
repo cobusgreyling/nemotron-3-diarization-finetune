@@ -1,0 +1,432 @@
+{
+  "model": "nvidia/Nemotron-3-Diarization",
+  "device": "mps",
+  "threshold": 0.5,
+  "hop_seconds": 0.01,
+  "collar_seconds": 0,
+  "ignore_overlap": false,
+  "frozen": "encoder",
+  "trained": "classifier",
+  "train_clips": 10,
+  "dev_clips": 2,
+  "holdout_clips": 4,
+  "before": {
+    "train": {
+      "split": "train",
+      "der": 0.11678677405680372,
+      "files": [
+        {
+          "id": "tr01",
+          "der": 0.05,
+          "duration": 4.395,
+          "total": 500,
+          "miss": 13,
+          "false_alarm": 12,
+          "speaker_error": 0
+        },
+        {
+          "id": "tr02",
+          "der": 0.05763688760806916,
+          "duration": 3.674,
+          "total": 347,
+          "miss": 17,
+          "false_alarm": 3,
+          "speaker_error": 0
+        },
+        {
+          "id": "tr03",
+          "der": 0.3504761904761905,
+          "duration": 4.644,
+          "total": 525,
+          "miss": 27,
+          "false_alarm": 8,
+          "speaker_error": 149
+        },
+        {
+          "id": "tr04",
+          "der": 0.02588235294117647,
+          "duration": 3.847,
+          "total": 425,
+          "miss": 3,
+          "false_alarm": 8,
+          "speaker_error": 0
+        },
+        {
+          "id": "tr05",
+          "der": 0.031413612565445025,
+          "duration": 5.32,
+          "total": 573,
+          "miss": 7,
+          "false_alarm": 11,
+          "speaker_error": 0
+        },
+        {
+          "id": "tr06",
+          "der": 0.021220159151193633,
+          "duration": 3.771,
+          "total": 377,
+          "miss": 3,
+          "false_alarm": 5,
+          "speaker_error": 0
+        },
+        {
+          "id": "tr07",
+          "der": 0.032,
+          "duration": 5.095,
+          "total": 500,
+          "miss": 4,
+          "false_alarm": 12,
+          "speaker_error": 0
+        },
+        {
+          "id": "tr08",
+          "der": 0.0380952380952381,
+          "duration": 4.35,
+          "total": 525,
+          "miss": 13,
+          "false_alarm": 7,
+          "speaker_error": 0
+        },
+        {
+          "id": "tr09",
+          "der": 0.031609195402298854,
+          "duration": 3.727,
+          "total": 348,
+          "miss": 4,
+          "false_alarm": 7,
+          "speaker_error": 0
+        },
+        {
+          "id": "tr10",
+          "der": 0.3979933110367893,
+          "duration": 5.275,
+          "total": 598,
+          "miss": 162,
+          "false_alarm": 3,
+          "speaker_error": 73
+        }
+      ],
+      "total": 4718,
+      "miss": 253,
+      "false_alarm": 76,
+      "speaker_error": 222
+    },
+    "dev": {
+      "split": "dev",
+      "der": 0.022222222222222223,
+      "files": [
+        {
+          "id": "dv01",
+          "der": 0.02669902912621359,
+          "duration": 4.121,
+          "total": 412,
+          "miss": 1,
+          "false_alarm": 10,
+          "speaker_error": 0
+        },
+        {
+          "id": "dv02",
+          "der": 0.01903114186851211,
+          "duration": 5.128,
+          "total": 578,
+          "miss": 2,
+          "false_alarm": 9,
+          "speaker_error": 0
+        }
+      ],
+      "total": 990,
+      "miss": 3,
+      "false_alarm": 19,
+      "speaker_error": 0
+    },
+    "holdout": {
+      "split": "holdout",
+      "der": 0.02738336713995943,
+      "files": [
+        {
+          "id": "ho01",
+          "der": 0.041254125412541254,
+          "duration": 5.46,
+          "total": 606,
+          "miss": 5,
+          "false_alarm": 20,
+          "speaker_error": 0
+        },
+        {
+          "id": "ho02",
+          "der": 0.0106951871657754,
+          "duration": 3.89,
+          "total": 374,
+          "miss": 0,
+          "false_alarm": 4,
+          "speaker_error": 0
+        },
+        {
+          "id": "ho03",
+          "der": 0.018134715025906734,
+          "duration": 3.463,
+          "total": 386,
+          "miss": 4,
+          "false_alarm": 3,
+          "speaker_error": 0
+        },
+        {
+          "id": "ho04",
+          "der": 0.0297029702970297,
+          "duration": 5.56,
+          "total": 606,
+          "miss": 9,
+          "false_alarm": 9,
+          "speaker_error": 0
+        }
+      ],
+      "total": 1972,
+      "miss": 18,
+      "false_alarm": 36,
+      "speaker_error": 0
+    }
+  },
+  "after": {
+    "train": {
+      "split": "train",
+      "der": 0.07672742687579483,
+      "files": [
+        {
+          "id": "tr01",
+          "der": 0.048,
+          "duration": 4.395,
+          "total": 500,
+          "miss": 11,
+          "false_alarm": 13,
+          "speaker_error": 0
+        },
+        {
+          "id": "tr02",
+          "der": 0.05475504322766571,
+          "duration": 3.674,
+          "total": 347,
+          "miss": 16,
+          "false_alarm": 3,
+          "speaker_error": 0
+        },
+        {
+          "id": "tr03",
+          "der": 0.3466666666666667,
+          "duration": 4.644,
+          "total": 525,
+          "miss": 28,
+          "false_alarm": 7,
+          "speaker_error": 147
+        },
+        {
+          "id": "tr04",
+          "der": 0.01647058823529412,
+          "duration": 3.847,
+          "total": 425,
+          "miss": 2,
+          "false_alarm": 5,
+          "speaker_error": 0
+        },
+        {
+          "id": "tr05",
+          "der": 0.02617801047120419,
+          "duration": 5.32,
+          "total": 573,
+          "miss": 5,
+          "false_alarm": 10,
+          "speaker_error": 0
+        },
+        {
+          "id": "tr06",
+          "der": 0.021220159151193633,
+          "duration": 3.771,
+          "total": 377,
+          "miss": 3,
+          "false_alarm": 5,
+          "speaker_error": 0
+        },
+        {
+          "id": "tr07",
+          "der": 0.03,
+          "duration": 5.095,
+          "total": 500,
+          "miss": 3,
+          "false_alarm": 12,
+          "speaker_error": 0
+        },
+        {
+          "id": "tr08",
+          "der": 0.03619047619047619,
+          "duration": 4.35,
+          "total": 525,
+          "miss": 11,
+          "false_alarm": 8,
+          "speaker_error": 0
+        },
+        {
+          "id": "tr09",
+          "der": 0.02586206896551724,
+          "duration": 3.727,
+          "total": 348,
+          "miss": 3,
+          "false_alarm": 6,
+          "speaker_error": 0
+        },
+        {
+          "id": "tr10",
+          "der": 0.10702341137123746,
+          "duration": 5.275,
+          "total": 598,
+          "miss": 41,
+          "false_alarm": 3,
+          "speaker_error": 20
+        }
+      ],
+      "total": 4718,
+      "miss": 123,
+      "false_alarm": 72,
+      "speaker_error": 167
+    },
+    "dev": {
+      "split": "dev",
+      "der": 0.01818181818181818,
+      "files": [
+        {
+          "id": "dv01",
+          "der": 0.019417475728155338,
+          "duration": 4.121,
+          "total": 412,
+          "miss": 0,
+          "false_alarm": 8,
+          "speaker_error": 0
+        },
+        {
+          "id": "dv02",
+          "der": 0.01730103806228374,
+          "duration": 5.128,
+          "total": 578,
+          "miss": 0,
+          "false_alarm": 10,
+          "speaker_error": 0
+        }
+      ],
+      "total": 990,
+      "miss": 0,
+      "false_alarm": 18,
+      "speaker_error": 0
+    },
+    "holdout": {
+      "split": "holdout",
+      "der": 0.02383367139959432,
+      "files": [
+        {
+          "id": "ho01",
+          "der": 0.034653465346534656,
+          "duration": 5.46,
+          "total": 606,
+          "miss": 3,
+          "false_alarm": 18,
+          "speaker_error": 0
+        },
+        {
+          "id": "ho02",
+          "der": 0.013368983957219251,
+          "duration": 3.89,
+          "total": 374,
+          "miss": 0,
+          "false_alarm": 5,
+          "speaker_error": 0
+        },
+        {
+          "id": "ho03",
+          "der": 0.015544041450777202,
+          "duration": 3.463,
+          "total": 386,
+          "miss": 3,
+          "false_alarm": 3,
+          "speaker_error": 0
+        },
+        {
+          "id": "ho04",
+          "der": 0.024752475247524754,
+          "duration": 5.56,
+          "total": 606,
+          "miss": 5,
+          "false_alarm": 10,
+          "speaker_error": 0
+        }
+      ],
+      "total": 1972,
+      "miss": 11,
+      "false_alarm": 36,
+      "speaker_error": 0
+    }
+  },
+  "training": {
+    "lr": 0.0001,
+    "epochs": 12,
+    "best_epoch": 6,
+    "history": [
+      {
+        "epoch": 1,
+        "loss": 0.03972650961950421,
+        "dev_der": 0.023232323232323233
+      },
+      {
+        "epoch": 2,
+        "loss": 0.03767932718619704,
+        "dev_der": 0.021212121212121213
+      },
+      {
+        "epoch": 3,
+        "loss": 0.03569773705676198,
+        "dev_der": 0.021212121212121213
+      },
+      {
+        "epoch": 4,
+        "loss": 0.034365390241146085,
+        "dev_der": 0.021212121212121213
+      },
+      {
+        "epoch": 5,
+        "loss": 0.0327149345073849,
+        "dev_der": 0.020202020202020204
+      },
+      {
+        "epoch": 6,
+        "loss": 0.031577917654067277,
+        "dev_der": 0.01818181818181818
+      },
+      {
+        "epoch": 7,
+        "loss": 0.030408493615686892,
+        "dev_der": 0.01919191919191919
+      },
+      {
+        "epoch": 8,
+        "loss": 0.029639445571228863,
+        "dev_der": 0.020202020202020204
+      },
+      {
+        "epoch": 9,
+        "loss": 0.028311520582064986,
+        "dev_der": 0.021212121212121213
+      },
+      {
+        "epoch": 10,
+        "loss": 0.027331416541710497,
+        "dev_der": 0.021212121212121213
+      },
+      {
+        "epoch": 11,
+        "loss": 0.026543614501133562,
+        "dev_der": 0.020202020202020204
+      },
+      {
+        "epoch": 12,
+        "loss": 0.02558839600533247,
+        "dev_der": 0.020202020202020204
+      }
+    ]
+  }
+}

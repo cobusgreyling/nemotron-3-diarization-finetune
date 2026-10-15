@@ -1,0 +1,4 @@
+transformers==5.19.0
+numpy
+torch
+librosa

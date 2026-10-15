@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+.hf/
+*.pyc
+.DS_Store
+outputs/train.log
